@@ -1,0 +1,42 @@
+body {
+    padding: 150px 150px 3000px 150px;
+    background-color: rgb(200, 230, 198);
+    position: relative;
+    font-family: Arial;
+    color: rgb(28, 33, 44);
+}
+
+p {
+    margin: 0;
+}
+
+.header {
+    display: flex;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    align-items: center;
+    justify-content: start;
+    height: 65px;
+    padding-left: 20px;
+    background-color: rgb(28, 33, 44);
+}
+
+.home-link {
+    text-decoration: none;
+    margin: 0;
+    font-weight: bold;
+    font-size: 20px;
+    color: rgb(200, 230, 198);
+}
+
+.logo-img {
+    width: 40px;
+}
+
+.actions-container {
+    display: flex;
+    justify-content: space-between;
+    font-weight: bold;
+}
