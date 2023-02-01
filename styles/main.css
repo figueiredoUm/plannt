@@ -1,0 +1,6 @@
+.main-container {
+    display: flex;
+    width: 300px;
+    justify-content: space-between;
+    font-weight: bold;
+}

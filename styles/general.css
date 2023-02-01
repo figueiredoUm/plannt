@@ -1,0 +1,13 @@
+body {
+    padding: 150px 0px 3000px 0px;
+    background-color: rgb(200, 230, 198);
+    position: relative;
+    font-family: Arial;
+    color: rgb(28, 33, 44);
+    display: flex;
+    justify-content: center;
+}
+
+p {
+    margin: 0;
+}
