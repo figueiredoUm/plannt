@@ -11,3 +11,20 @@ body {
 p {
     margin: 0;
 }
+
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: rgb(28, 33, 44);
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: hsl(221, 22%, 25%);
+    border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: hsl(221, 22%, 20%);
+}
