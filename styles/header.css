@@ -9,11 +9,10 @@
     right: 0;
     left: 0;
     justify-content: start;
-    height: 65px;
+    height: 7vh;
     padding-left: 20px;
-    background-color: rgb(28, 33, 44);
+    background-color: hsl(221, 35%, 14%);
     z-index: 100;
-    border-bottom-left-radius: 15px;
 }
 
 .home-link {
@@ -21,7 +20,7 @@
     text-decoration: none;
     font-weight: bold;
     font-size: 20px;
-    color: rgb(200, 230, 198);
+    color: hsl(116, 100%, 90%);
 }
 
 .logo-img {

@@ -1,11 +1,18 @@
+html {
+    background-color: hsl(221, 35%, 14%);
+    padding-bottom: 58px;
+}
+
 body {
-    padding: 150px 0px 3000px 0px;
-    background-color: rgb(200, 230, 198);
+    background-color: hsl(116, 100%, 90%);
+    padding-block: 70px 3000px;
     position: relative;
-    font-family: Arial;
-    color: rgb(28, 33, 44);
+    border-radius: 6px;
+    top: 6.1vh;
     display: flex;
     justify-content: center;
+    font-family: Arial;
+    color: hsl(221, 35%, 14%);
 }
 
 p {
@@ -17,14 +24,14 @@ p {
 }
 
 ::-webkit-scrollbar-track {
-    background-color: rgb(28, 33, 44);
+    background-color: hsl(221, 35%, 14%);
 }
 
 ::-webkit-scrollbar-thumb {
-    background-color: hsl(221, 22%, 25%);
+    background-color: hsl(221, 35%, 27%);
     border-radius: 3px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background-color: hsl(221, 22%, 20%);
+    background-color: hsl(221, 35%, 32%);
 }
