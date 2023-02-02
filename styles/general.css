@@ -1,14 +1,8 @@
-html {
-    background-color: hsl(221, 35%, 14%);
-    padding-bottom: 58px;
-}
-
 body {
     background-color: hsl(116, 100%, 90%);
     padding-block: 70px 3000px;
     position: relative;
-    border-radius: 6px;
-    top: 6.1vh;
+    top: 60px;
     display: flex;
     justify-content: center;
     font-family: Arial;

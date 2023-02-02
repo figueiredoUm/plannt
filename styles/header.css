@@ -9,13 +9,13 @@
     right: 0;
     left: 0;
     justify-content: start;
-    height: 7vh;
-    padding-left: 20px;
+    height: 60px;
     background-color: hsl(221, 35%, 14%);
     z-index: 100;
 }
 
 .home-link {
+    margin-left: 20px;
     align-items: center;
     text-decoration: none;
     font-weight: bold;
