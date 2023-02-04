@@ -1,0 +1,201 @@
+
+/* General */
+
+.body {
+    background-image: linear-gradient(to bottom right, hsl(151, 32%, 41%), hsl(175, 80%, 22%));
+    color: hsl(221, 35%, 14%);
+    font-family: Arial; 
+    display: flex;
+    justify-content: center;
+}
+
+p {
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: hsl(163, 56%, 31.5%);
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: hsl(221, 35%, 27%);
+    border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: hsl(221, 35%, 32%);
+}
+
+::-webkit-scrollbar-thumb:active {
+    background-color: hsl(221, 35%, 36%);
+}
+
+/* Main page */
+
+.body.main {
+    padding-block: 70px 3000px;
+    position: relative;
+    top: 60px;
+}
+
+/* Header */
+
+.header,
+.home-link {
+    display: flex;
+    align-items: center;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    justify-content: space-between;
+    height: 60px;
+    background-image: linear-gradient(to bottom right, hsl(151, 32%, 41%), hsl(165, 60%, 30%));
+    box-shadow: 0px 0px 8px hsl(221, 35%, 20%);
+    z-index: 100;
+    padding: 0 20px 0 20px
+}
+
+.home-link {
+    font-size: 20px;
+    color: white;
+    font-weight: bold; 
+}
+
+.logo-img {
+    width: 40px;
+}
+
+.login-button-header,
+.signup-button-header {
+    cursor: pointer;
+    border: none;
+    background-color: inherit;
+    border-radius: 4px;
+    padding: 8px 15px;
+}
+
+.login-button-header {
+    color:hsl(221, 35%, 20%);
+    transition: color 0.25s;
+}
+
+.login-button-header:hover {
+    color: hsl(221, 35%, 90%)
+}
+
+.signup-button-header {
+    background-color: hsl(221, 35%, 27%);
+    color: white;
+    transition: background-color 0.25s;
+}
+
+.signup-button-header:hover {
+    background-color: hsl(221, 35%, 32%);
+}
+
+
+
+/* Main */
+
+.main-container {
+    display: flex;
+    width: 300px;
+    justify-content: space-between;
+    font-weight: bold;
+}
+
+
+/* Login page */
+
+.body.login {
+    background-image: url(leaves.jpg);
+}
+
+.bg-img {
+    background-image: url(leaves.jpg);
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    
+    -webkit-filter: blur(3px);
+    -moz-filter: blur(3px);
+    -o-filter: blur(3px);
+    -ms-filter: blur(3px);
+    filter: blur(3px);
+  }
+
+.login-container {
+
+    
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+
+    padding: 50px;
+    border-radius: 8px;
+    display: block;
+
+    color: white;
+    font-weight: bold;
+    font-size: 15px;
+    box-shadow: 0px 0px 10px hsl(221, 35%, 14%);
+    background-color:hsla(221, 35%, 14%, 0.9);
+}
+
+.bottom {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.bottom input {
+    border: 1px solid hsla(221, 35%, 27%, 0.4);
+    border-radius: 3px;
+    padding: 5px;
+    font-size: 13.5px;
+    font-family: Arial;
+    outline: none; 
+}
+
+.bottom input:active,
+.bottom input:focus {
+    border: 1px solid hsla(221, 35%, 27%, 1);
+}
+
+.email-container,
+.password-container {
+    margin-bottom: 30px;
+}
+
+.email-container p,
+.password-container p {
+    margin-bottom: 11px;
+}
+
+.login-button {
+    border: none;
+    padding: 6px 22px;
+    background-color: hsl(221, 35%, 32%);
+    box-shadow: 0px 0px 3px hsl(221, 35%, 14%);
+    border-radius: 3px;
+    color: white;
+    transition: background-color 0.25s;
+}
+
+.login-button:hover {
+    background-color: hsl(221, 35%, 37%);
+}
