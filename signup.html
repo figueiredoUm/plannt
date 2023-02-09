@@ -5,7 +5,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>plannt &#183; Log in</title>
+    <title>plannt &#183; Sign up</title>
+    <link rel="shortcut icon" type="image/ico" href="images/favicon.ico">
     <link rel = "stylesheet" href = "styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -13,14 +14,14 @@
 
 </head>
 
-<body class = "body sgnp">
+<body id = "sgnp">
 
-    <div class = "header">
+    <header>
         <a class = "home-link" href = "index.html">
-            <img class = "plannt-logo" src = "images/plant-header.svg">
+            <img class = "plannt-logo" src = "images/plant-header.svg" alt = "plannt-logo">
             <p>plannt</p>
         </a>
-        <div class = "lgn-sgnp-container">
+        <div class = "lgn-sgnup-container">
             <a href = "login.html">
                 <button class = "lgn-button-header">
                 Log in
@@ -32,31 +33,33 @@
                 </button>
             </a>
         </div>
-    </div>
+    </header>
 
-    <div class = "sgnp-container">
-        <div class = "title">Welcome!</div>
-        <div class = "sub-title">Create a New Account</div>
+    <main>
+        <div class = "registration-container">
+            <div class = "title">Welcome!</div>
+            <div class = "sub-title">Create a New Account</div>
 
-        <div class = "content">
-            <div class = "name-container">
-                <p>Name</p>
-                <input type = "text">
+            <div class = "content">
+                <div class = "name-container">
+                    <p>Name</p>
+                    <input type = "text">
+                </div>
+                <div class = "email-container">
+                    <p>Email</p>
+                    <input type = "text">
+                </div>
+                <div class = "psw-container">
+                    <p>Password</p>
+                    <input type = "password">
+                </div>
+                <button class = "sgnp-button">
+                    Sign up
+                </button>
+                
             </div>
-            <div class = "email-container">
-                <p>Email</p>
-                <input type = "text">
-            </div>
-            <div class = "psw-container signup">
-                <p>Password</p>
-                <input type = "password">
-            </div>
-            <button class = "signup-button">
-                Sign up
-            </button>
-            
         </div>
-    </div>
+    </main>
 
 
 </body>

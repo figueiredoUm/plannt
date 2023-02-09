@@ -13,14 +13,26 @@
 }
 
 
-
 /* General */
 
+:root {
+    --light-green: hsl(136, 30%, 70%);
+    --green: hsl(136, 30%, 55%);
+    --dark-green: hsl(136, 30%, 45%);
+
+    --light-blue: hsl(221, 30%, 60%);
+    --blue: hsl(221, 30%, 52%); 
+    --dark-blue: hsl(221, 30%, 45%); 
+    
+    --black: hsl(221, 30%, 15%);
+}
+
 body {
-    color: hsl(221, 30%, 12%); 
     display: flex;
     justify-content: center;
     overflow: overlay;
+    background-color: var(--dark-green);
+    color: var(--black);
 }
 
 p {
@@ -32,7 +44,7 @@ a {
 }
 
 * {
-    font-family: 'Lexend Deca' ,sans-serif; 
+    font-family: 'Lexend Deca', Arial, Tahoma;
 }
 
 ::-webkit-scrollbar {
@@ -44,54 +56,52 @@ a {
 }
 
 ::-webkit-scrollbar-thumb {
-    background-color: hsl(221, 35%, 27%);
+    background-color: var(--light-blue);
     background-clip: padding-box;
-    border: 2px solid hsla(0, 0%, 0%, 0);
+    border: 3px solid transparent;
     border-radius: 10px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background-color: hsl(221, 35%, 32%);
+    background-color: var(--blue)
 }
 
 ::-webkit-scrollbar-thumb:active {
-    background-color: hsl(221, 35%, 35%);
+    background-color: var(--dark-blue);
 }
 
 /* Body */
 
-.body.main {
-    padding-block: 130px 900px;
+body#main {
+    padding-block: 130px 330px;
     background-image: url(images/leaves-main.jpg);
 }
 
-.body.lgn,
-.body.sgnp {
+body#lgn,
+body#sgnp {
     background-image: url(images/leaves-registration.jpg);
 }
 
 /* Header */
 
-.header,
-.home-link {
+header {
     display: flex;
     align-items: center;
-}
-
-.header {
+    justify-content: space-between;
     position: absolute;
     top: 0;
     right: 0;
     left: 0;
-    justify-content: space-between;
     height: 60px;  
-    z-index: 100;
     padding: 10px 60px 0 40px;
-
+    z-index: 100;
     animation: header-transition-in 0.7s;
 }
 
+
 .home-link {
+    display: flex;
+    align-items: center;
     font-size: 20px;
     color: white;
     font-weight: 400;
@@ -99,7 +109,7 @@ a {
 }
 
 .home-link:hover {
-    text-shadow: 0px 0px 5px hsla(0, 0%, 100%, 0.2); 
+    text-shadow: 0px 0px 5px hsla(0, 0%, 100%, 0.25); 
 }
 
 .plannt-logo {
@@ -107,14 +117,7 @@ a {
     height: 40px;
 }
 
-.lgn-sgnp-container a {
-    pointer-events: none;
-}
-
-.lgn-button-header,
-.sgnp-button-header,
-.login-button,
-.signup-button {
+header button {
     pointer-events: all;
     cursor: pointer;
     border: none;
@@ -123,49 +126,44 @@ a {
 }
 
 .lgn-button-header {
-    background-color: inherit;
+    background-color: transparent;
     margin-right: 6px;
     transition: color 0.5s;
 }
 
 .lgn-button-header:hover {
-    color:hsl(216, 30%, 45%);
+    color: var(--dark-blue);
 }
 
 .sgnp-button-header {
     background: linear-gradient(190deg, hsla(0, 0%, 9%, 0.25), hsla(0, 0%, 0%, 0));
-    background-color:hsl(136, 30%, 55%);
-}
-
-.sgnp-button-header,
-.login-button,
-.signup-button {
+    background-color: var(--green);
     transition: background-color 0.5s;
     border-radius: 4px;
 }
 
-
-.sgnp-button-header:hover,
-.login-button:hover,
-.signup-button:hover {
+.sgnp-button-header:hover {
     background-color: transparent;
 }
 
+.lgn-sgnp-container a {
+    pointer-events: none;
+}
 
 
 /* Main */
 
-.main-container {
+#main .container {
     display: block;
     box-sizing: border-box;
     padding: 30px 0 0 50px;
     width: 500px;
     height: 600px;
     font-weight: 400;
-    background-color: azure;
+    background-color: white;
 }
 
-.main-container-header,
+#main .container-header,
 .leaf-container,
 .clock-container {
     display: flex;
@@ -186,10 +184,9 @@ a {
 }
 
 
-/* Login page */
+/* Registration pages */
 
-.lgn-container,
-.sgnp-container {
+.registration-container {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -202,108 +199,98 @@ a {
     font-weight: 500;
     color: white;
     background: linear-gradient(190deg, hsla(0, 0%, 0%, 0.5) 30%, hsla(0, 0%, 100%, 0.02));
-    box-shadow: 0px 0px 10px hsla(221, 0%, 14%, 0.5);
-    backdrop-filter: blur(3px);
+    box-shadow: 0px 0px 10px hsla(0, 0%, 14%, 0.5);
+    backdrop-filter: blur(5px);
 }
 
-.lgn-container .title,
-.lgn-container .content,
-.sgnp-container .title,
-.sgnp-container .sub-title,
-.sgnp-container .content {
+.registration-container .title,
+.registration-container .sub-title {
     display: flex;
-}
-
-
-.lgn-container .title,
-.sgnp-container .title,
-.sgnp-container .sub-title {
     justify-content: center;
     font-weight: 300;
-    color:hsl(136, 30%, 70%);
-}
-
-.lgn-container .title,
-.sgnp-container .title {
+    color: var(--light-green);
+    margin-bottom: 50px;
     font-size: 20px;
 }
 
-.lgn-container .title,
-.sgnp-container .sub-title  {
-    margin-bottom: 50px;
+#sgnp .title  {
+    margin-bottom: 4px
 }
 
-.lgn-container .content,
-.sgnp-container .content {
+#sgnp .sub-title {
+    font-size: 12px;
+}
+
+.registration-container .content{
+    display: flex;
     flex-direction: column;
 }
 
-.lgn-container .content input[type="text"], 
-.lgn-container .content input[type = "password"],
-.sgnp-container .content input[type="text"], 
-.sgnp-container .content input[type = "password"] {
+.registration-container input {
     display: block;
     width: 200px;
     padding: 5px;
-    border: none;
-    outline: none;
+    margin-bottom: 6px;
     font-size: 13px;
     font-weight: 300;
     background-color: transparent;
+    border: none;
+    outline: none;
     border-bottom:hsl(0, 0%, 75%) solid 2px;
     color: white;
     transition: border-bottom 0.3s;
-    margin-bottom: 6px;
 }
 
-.sgnp-container .content input[type = "password"] {
+#sgnp input[type = "password"] {
     margin-bottom: 19px;
 }
 
-.lgn-container .content input:focus,
-.sgnp-container .content input:focus {
-    border-bottom:hsl(0, 0%, 100%) solid 2px;
-}
-
-.sgnp-container .title {
-    margin-bottom: 4px;
+.registration-container input:focus {
+    border-bottom:white solid 2px;
 }
 
 .email-container,
 .name-container,
-.psw-container.signup {
+#sgnp .psw-container,
+.forgot-psw-container {
     margin-bottom: 30px;
 }
 
 
-.email-container p,
-.psw-container p,
-.name-container p{
+.registration-container p {
     margin-bottom: 8px;
 }
 
 .forgot-psw-container {
     display: flex;
     justify-content: end;
-    margin-bottom: 30px;
-}
-
-.forgot-psw {
     font-size: 10px;
     font-weight: 300;
     color: white;
 }
 
-.login-button,
-.signup-button {
+
+.registration-container button {
     font-weight: 300;
     background: linear-gradient(190deg, hsla(0, 0%, 100%, 0.3), hsla(0, 0%, 0%, 0));
+    pointer-events: all;
+    cursor: pointer;
+    border: none;
+    border-radius: 4px;
+    padding: 8px 15px;
+    color: white;
+    transition: background-color 0.5s;
 }
 
-.login-button {
-    background-color:hsl(216, 30%, 45%);
+#lgn .lgn-button {
+    background-color: var(--dark-blue);
 }
 
-.signup-button {
-    background-color:hsl(136, 30%, 45%);
+#sgnp .sgnp-button {
+    background-color: var(--dark-green);
+}
+
+#lgn .lgn-button:hover,
+#sgnp .sgnp-button:hover {
+    background-color: transparent;
 }
