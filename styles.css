@@ -4,12 +4,25 @@
 
     0% {
         transform: translateY(-100%);
+        filter: blur(3px);
     }
 
     100% {
         transform: translateY(0);
+        filter: none;
     }
 
+}
+
+@keyframes body-transition-in {
+
+    0% {
+        filter: blur(3px);
+    }
+
+    100% {
+        filter: none;
+    }
 }
 
 
@@ -31,8 +44,13 @@ body {
     display: flex;
     justify-content: center;
     overflow: overlay;
-    background-color: var(--dark-green);
+    background-color: var(--light-green);
     color: var(--black);
+}
+
+#main main,
+.registration-container div {
+    animation: body-transition-in 0.7s ease-out;
 }
 
 p {
@@ -75,11 +93,18 @@ a {
 body#main {
     padding-block: 130px 330px;
     background-image: url(images/leaves-main.jpg);
+    background-position: center;
+    background-repeat: no-repeat; 
+    background-size: cover; 
 }
 
 body#lgn,
 body#sgnp {
+    padding-block: 0px 825px;
     background-image: url(images/leaves-registration.jpg);
+    background-position: center;
+    background-repeat: no-repeat; 
+    background-size: cover;
 }
 
 /* Header */
@@ -95,7 +120,7 @@ header {
     height: 60px;  
     padding: 10px 60px 0 40px;
     z-index: 100;
-    animation: header-transition-in 0.7s;
+    animation: header-transition-in 0.8s;
 }
 
 
@@ -198,9 +223,9 @@ header button {
     font-size: 12px;
     font-weight: 500;
     color: white;
-    background: linear-gradient(190deg, hsla(0, 0%, 0%, 0.5) 30%, hsla(0, 0%, 100%, 0.02));
-    box-shadow: 0px 0px 10px hsla(0, 0%, 14%, 0.5);
-    backdrop-filter: blur(5px);
+    background: linear-gradient(0, hsla(0, 0%, 0%, 0.5) 30%, hsla(0, 0%, 100%, 0.02));
+    box-shadow: 0px 0px 5px hsla(0, 0%, 10%, 0.5);
+    backdrop-filter: blur(12px);
 }
 
 .registration-container .title,
