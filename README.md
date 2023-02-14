@@ -1,6 +1,6 @@
-# plannt
+# What is plannt?
 
-**Plant watering schedule website project**
+plannt is a website about plant-watering planning
 
 # Motivation
 
