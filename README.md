@@ -6,7 +6,7 @@ plannt is a website about plant-watering planning
 
 I made this to practice HTML, CSS and potentially JavaScript.
 
-I also made this for personal use.
+This project was also made for my me, since I really like plants, although I forget to water them sometimes =/.
 
 # Photos
 
