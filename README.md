@@ -17,3 +17,4 @@ Login and Signup pages: Photo by Skitterphoto: https://www.pexels.com/photo/phot
 # Icons
 
 Icons by: https://icons8.com
+          https://www.iconpacks.net/
